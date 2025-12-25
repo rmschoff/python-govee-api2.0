@@ -11,11 +11,10 @@ from govee_api_laggat.govee_dtos import GoveeDevice, GoveeSource
 
 _LOGGER = logging.getLogger(__name__)
 
-_API_BASE_URL = "https://developer-api.govee.com"
-_API_DEVICES = _API_BASE_URL + "/v1/devices"
-_API_DEVICES_CONTROL = _API_BASE_URL + "/v1/devices/control"
-_API_DEVICES_STATE = _API_BASE_URL + "/v1/devices/state"
-# API rate limit header keys
+_API_BASE_URL = "https://openapi.api.govee.com"
+_API_DEVICES = _API_BASE_URL + "/router/api/v1/user/devices"
+_API_DEVICES_CONTROL = _API_BASE_URL + "/router/api/v1/device/control"
+_API_DEVICES_STATE = _API_BASE_URL + "/router/api/v1/device/state"# API rate limit header keys
 _RATELIMIT_TOTAL = "Rate-Limit-Total"  # The maximum number of requests you're permitted to make per minute.
 _RATELIMIT_REMAINING = "Rate-Limit-Remaining"  # The number of requests remaining in the current rate limit window.
 _RATELIMIT_RESET = "Rate-Limit-Reset"  # The time at which the current rate limit window resets in UTC epoch seconds.
